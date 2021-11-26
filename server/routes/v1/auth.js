@@ -1,35 +1,69 @@
 const express = require('express')
 const router = express.Router()
 
-router.post('/', (req, res) => 
-    _out.print(res, null, [req.body])
-)
-
-router.get('/signin', async (req, res) => {
+router.post('/signin', async (req, res) => {
     
     let sql
     let valid = {}
+    let body = req.body
     let result
 
+    const params = [
+        {key: 'provider', value: 'a.provider', type: 'str', max: 60, required: true, where: true, eq: true},
+        {key: 'auth_id', value: 'a.auth_id', type: 'str', max: 128, required: true, where: true, eq: true, enc: true},
+        {key: 'password', value: 'u.password', type: 'str', max: 128, optional: true, where: true, eq: true}
+    ]
+
     try {
+        _util.valid(body, params, valid)
+    } catch (e) {
+        _out.err(res, _CONSTANT.INVALID_PARAMETER, e.toString(), null)
+        return
+    }
+
+    try {
+
+        if (valid.params['provider'] === "email" && !valid.params['password']) {
+            _out.print(res, _CONSTANT.INVALID_PARAMETER, null)
+            return
+        }
+
+        valid.params['password'] = _util.encryptSha256(valid.params['password'])
+
         sql = `
             SELECT
-                *
-            FROM 
-                users
+                u.id, 
+                CAST(AES_DECRYPT(UNHEX(u.birth_date), '${__secret_key}') as char) as birth_date,
+                u.role
+            FROM
+                users u
+            INNER JOIN
+                auth a
+            ON
+                u.id = a.user_id
+            WHERE
+                1=1
+                ${valid.where}
         `
-        result = await _db.qry(sql, valid)
+        result = await _db.qry(sql, valid.params)
 
         if (result.length < 1) {
             _out.print(res, _CONSTANT.EMPTY_DATA, null)
             return
         }
 
-        _out.print(res, null, result)
+    } catch (e) {
+        _out.err(res, _CONSTANT.ERROR_500, e.toString(), null)
+        return
+    }
 
+    try {
+        const token = await _jwt.sign({u: result[0]['id'], l: result[0]['role']})
+        _out.print(res, null, [token])
     } catch (e) {
         _out.err(res, _CONSTANT.ERROR_500, e.toString(), null)
     }
+
 })
 
 router.post('/signup', async (req, res) => {

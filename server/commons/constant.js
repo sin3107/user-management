@@ -28,11 +28,11 @@ module.exports = {
         ,message: "not authorized"
     }
     ,NOT_ALLOWED_PROVIDER: {
-        code: 2005
+        code: 2004
         ,message: "not allowed provider"
     }
     ,AUTHORIZED_CHECK_FAULURE: {
-        code: 2006
+        code: 2005
         ,message: "authorization check failure"
     }
     ,JSON_PARSE_ERROR: {
