@@ -11,7 +11,6 @@ module.exports = {
         code: 1002
         ,message: "already signuped"
     }
-
     ,EMPTY_PARAMETER: {
         code: 2000
         ,message: "empty parameters"
@@ -44,7 +43,6 @@ module.exports = {
         code: 4001
         ,message: "not found"
     }
-
     ,ERROR_500: {
         code: 5000
         ,message: "something broken"

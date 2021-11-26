@@ -16,6 +16,7 @@ global.util = require('util')
 
 //app init
 global.__base = __dirname
+global.__secret_key = process.env.ENCRYPTION_CODE
 
 const router = require( `${__base}/routes` )
 const db = require( `${__base}/commons/db` )
