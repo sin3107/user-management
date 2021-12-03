@@ -95,7 +95,7 @@
     * out.js - client로 전달 할 json type data
     * util.js - parameter 유효성 체크
 
-  2. routes - api 작성 폴더
+  2. ```routes``` - api 작성 폴더
     * index.js
     2.1. v1
       2.1.1. admin
