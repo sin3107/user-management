@@ -71,11 +71,39 @@
 
   2. ```routes``` - api 작성 폴더
     * index.js
+    
     2.1. v1
+    
       2.1.1. admin
+          * answer.js - 문의 관련 api
+          * category.js - 카테고리 설정 및 확인 api
+          * comments.js - 댓글 관리 api
+          * graph.js - 회원가입 통계 api
+          * message.js - 관리자 메시지 api
+          * notice.js - 공지 api
+          * posts.js - 게시물 관리 api
+          * push.js - 푸시 메시지 api
+          * record.js - 관리자 계정 api 사용 기록 확인 api
+          * reports.js - 신고 확인 및 정지 api
+          * users.js - 유저 정보 확인
+          
       2.1.2. file
-        * uploader.js - aws s3 upload
-        * viewer.js - aws s3 view
-      * auth.js
-      * auth_check.js
+          * uploader.js - aws s3 upload
+          * viewer.js - aws s3 view
+          
+      * index.js - 각 api 호출 및 토큰값 특정위치 체크
+      * auth.js - 회원가입, 탈퇴, id찾기 등 계정관련 api
+      * auth_check.js - index.js에서 로그인 후 사용할 수 있는 기능에 대하여 token 확인
+      * category.js - 게시판 카테고리 설정 api
+      * comments.js - 게시물에 대한 댓글 api
+      * message.js - 사용자 메시지 api
+      * notice.js - 공지사항 api
+      * notification.js - 사용자 알림 api
+      * posts.js - 게시물 CRUD api
+      * profiles.js - 프로필 정보 확인 및 수정 api
+      * question.js - 문의 api
+      * reports.js - 신고 api
+      * search.js - 닉네임 혹은 태그로 게시물 검색 api
+      * users.js - 유저 정보 확인 및 수정 api
+      
 ```
