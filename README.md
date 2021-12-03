@@ -35,7 +35,7 @@
   * ```$ node server/app```
 * aws lambda (**lambda에서 사용하지 말것..**)
   * ```$ npm install aws-serverless-express```
-  * zip the folder and upload `lambda.js`
+  * zip the folder and upload `server/lambda.js`
 ```
 # init logger
 # init utils
