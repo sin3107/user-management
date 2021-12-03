@@ -1,12 +1,31 @@
 # user-management
 
-server
-- commons : 자주 사용하는 부분 함수화
+.env.sample 참고하여 .env 작성
+
+## Environment
+* encoding = utf-8
+* NodeJS@14
+* express
+* node
+* Mysql DB 5.7
+* client port 3000
+* server client proxy -> /api
+
+### package setup
+npm i
+
+### app start
+pm2 start server/app.js -i 4 --name "app"
+node server/app
+
 ```
- - constant
- - db
- - jwt
- - logger
- - out : 출력문 관리
- - util : 입력받은 값 체크
+# init logger
+# init utils
+# init CONSTANT Variables
+# init printer
+# load db success
+# load jwt success
+# /api route set success
 ```
+
+
