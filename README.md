@@ -11,17 +11,28 @@
 * client port 3000
 * server client proxy -> /api
 
-### package setup
-* npm i
+### Package Setup
+[npm](https://www.npmjs.com/)
+* npm install 
+  * express
+  * dotenv
+  * cors
+  * crypto
+  * jsonwebtoken
+  * mysql
+  * cookie-parser
+  * firebase-admin
+  * moment
 
-### app start
+### App Start
 * linux server
   * npm install -g pm2
   * pm2 start server/app.js -i 4 --name "app"
 * local
   * node server/app
 * aws lambda
-  * zip the folder and upload: lambda.js 
+  * npm install aws-serverless-express 
+  * zip the folder and upload `lambda.js` 
 ```
 # init logger
 # init utils
