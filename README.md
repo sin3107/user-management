@@ -29,12 +29,12 @@
 
 ### App Start
 * linux server
-  * npm install -g pm2
-  * pm2 start server/app.js -i 4 --name "app"
+  * ```$ npm install -g pm2```
+  * ```$ pm2 start server/app.js -i 4 --name "app"```
 * local
-  * node server/app
-* aws lambda **이 방법 사용하지 말것..**
-  * npm install aws-serverless-express 
+  * ```$ node server/app```
+* aws lambda (**lambda에서 사용하지 말것..**)
+  * ```$ npm install aws-serverless-express```
   * zip the folder and upload `lambda.js`
 ```
 # init logger
