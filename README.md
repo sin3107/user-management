@@ -46,4 +46,18 @@
 # /api route set success
 ```
 
+## Directory
+* docs
+ - api 사용 설명을 위한 폴더
+ * ```CODE.md``` : 반환 메시지
+ * ```그 외 .md``` : api 설명
+
+* server
+  * ```api.local.js``` - local에서 실행하기 위해 설정한 실행파일
+  * ```app.js``` - server 실행 파일
+  * ```lambda.js``` - lambda에서 실행하기 위해 설정한 실행파일
+
+  * commons
+
+  * routes
 
