@@ -53,10 +53,10 @@
  * ```그 외 .md``` - api 설명
 
 * server
- * ```api.local.js``` - local에서 실행하기 위해 설정한 실행파일
- * ```app.js``` - server 실행 파일
- * ```lambda.js``` - lambda에서 실행하기 위해 설정한 실행파일
- * commons
+  * ```api.local.js``` - local에서 실행하기 위해 설정한 실행파일
+  * ```app.js``` - server 실행 파일
+  * ```lambda.js``` - lambda에서 실행하기 위해 설정한 실행파일
+  * commons
    - 자주 사용하는 기능들을 함수화하여 사용
    * ```constant.js``` - client로 전달 할 코드 설정
    * ```db.js``` - mysql 및 query
@@ -68,8 +68,8 @@
    * ```out.js``` - client로 전달 할 json type data
    * ```util.js``` - parameter 유효성 체크
 
- * routes
-  * ```index.js``` - 버전관리
-  * v1
-   * admin
+  * routes
+   * ```index.js``` - 버전관리
+   * v1
+    * admin
 
