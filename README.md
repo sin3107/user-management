@@ -55,7 +55,7 @@
   * ```api.local.js``` - local에서 실행하기 위해 설정한 실행파일
   * ```app.js``` - server 실행 파일
   * ```lambda.js``` - lambda에서 실행하기 위해 설정한 실행파일
-   2.1 commons - 자주 사용하는 기능들을 함수화하여 사용
+  * commons folder - 자주 사용하는 기능들을 함수화하여 사용
     * ```constant.js``` - client로 전달 할 코드 설정
     * ```db.js``` - mysql 및 query
     * ```fcm.js``` - fcm 
@@ -66,8 +66,11 @@
     * ```out.js``` - client로 전달 할 json type data
     * ```util.js``` - parameter 유효성 체크
 
-   2.2 routes
+  * 2.2 routes folder
     * ```index.js``` - 버전관리
-    * v1
-      * admin
+    * v1 folder
+      * admin folder
+      * file
+        * ```uploader.js``` - aws s3 upload
+        * ```viewer.js``` - aws s3 view
 
