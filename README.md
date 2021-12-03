@@ -65,8 +65,8 @@
    * ```logger.js``` - log
    * ```mailer.js``` - smtp
    * ```notify.js``` - fcm 출력문
-  * ```out.js``` - client로 전달 할 json type data
-  * ```util.js``` - parameter 유효성 체크
+   * ```out.js``` - client로 전달 할 json type data
+   * ```util.js``` - parameter 유효성 체크
 
  * routes
   * ```index.js``` - 버전관리
