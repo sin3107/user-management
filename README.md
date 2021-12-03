@@ -22,7 +22,10 @@
   * mysql
   * cookie-parser
   * firebase-admin
+  * formidable
+  * fs-extra
   * moment
+* 실행 실패 시 npm i 후 테스트 진행
 
 ### App Start
 * linux server
@@ -30,9 +33,9 @@
   * pm2 start server/app.js -i 4 --name "app"
 * local
   * node server/app
-* aws lambda
+* aws lambda **이 방법 사용하지 말것..**
   * npm install aws-serverless-express 
-  * zip the folder and upload `lambda.js` 
+  * zip the folder and upload `lambda.js`
 ```
 # init logger
 # init utils
