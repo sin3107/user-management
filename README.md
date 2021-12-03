@@ -12,11 +12,14 @@
 * server client proxy -> /api
 
 ### package setup
-npm i
+* npm i
 
 ### app start
-pm2 start server/app.js -i 4 --name "app"
-node server/app
+* linux server
+  * npm install -g pm2
+  * pm2 start server/app.js -i 4 --name "app"
+* local
+  * node server/app
 
 ```
 # init logger
