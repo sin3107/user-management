@@ -20,7 +20,8 @@
   * pm2 start server/app.js -i 4 --name "app"
 * local
   * node server/app
-
+* aws lambda
+  * zip the folder and upload: lambda.js 
 ```
 # init logger
 # init utils
